@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="chemo.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Chemosynthesis</title>
     <style></style>
   </head>
-  <body>  
+  <body>
     <div class="sea">
       <svg class="fish" id="fish">
         <path
@@ -51,8 +52,27 @@
           id="fish1"
         />
       </svg>
-
-            <div id="coral"></div>
+      <div class="ocean">
+        <div class="vent" id="vent">
+          <div class="chemicals" id="chemicals"></div>
+          <div class="bacteria" id="bacteria" title="Bacteria"></div>
+          <!-- Title for hover -->
+          <div class="energy" id="energy" title="Energy"></div>
+          <!-- Title for hover -->
+        </div>
+        <div class="tube-worms" id="tube-worms" title="Tube Worm"></div>
+        <!-- Title for hover -->
+      </div>
+      <div class="info-panel">
+        <h2 id="step-title">Step 1: Hydrothermal Vents Release Chemicals</h2>
+        <p id="step-description">
+          Hydrothermal vents release hydrogen sulfide and other chemicals into
+          the surrounding water.
+        </p>
+      </div>
+      <button id="next-step">Next Step</button>
+      <script src="app.js"></script>
+      <div id="coral"></div>
       <div id="coral_dome"></div>
       <div id="coral2"></div>
       <div id="c1" class="c1"></div>
@@ -67,7 +87,7 @@
     </div>
 
     <script>
-           //   bubble
+      //   bubble
       document
         .getElementById("coral")
         .addEventListener("click", function (event) {
