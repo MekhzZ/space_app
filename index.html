@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Name</title>
+    <title>Tantransha</title>
 
     <!-- Import Bootstrap CSS -->
     <link
@@ -28,6 +28,7 @@
         <span class="logo-text">Deep Sea-create</span>
       </div>
       <div class="moon"></div>
+      <div class="say"></div>
       <div class="cloud top-right"></div>
       <div class="cloud top-left"></div>
       <div class="fish1" style="top: 20%; left: 30px; position: fixed"></div>
@@ -93,6 +94,7 @@
 
       make_dark = () => {
         $(".sun").fadeOut(1500);
+        $(".say").fadeOut(1500);
         $(".top-left").fadeOut(500);
         $("body").fadeOut(750, function () {
           $(this).attr("class", "bg-dark").fadeIn(1500);
@@ -113,10 +115,13 @@
       }
 
       $(document).ready(function () {
+        $(".moon").hide();
+        $(".say").append("<p class='text-dark lead light'>After the moonrise, the deep oceans starts it's day...</p>");
+
         $("#depth").hide();
         $("body").css("overflow", "hidden");
         $("body").attr("class", "bg-light");
-        $(".moon").hide();
+        
         $(".logo").hide();
         $(".top-right").hide();
 
@@ -127,7 +132,7 @@
               createStar();
             }
           }, 1000);
-        }, 2000);
+        }, 5000);
 
         $(window).on("scroll", function () {
           let depth = Math.round($(window).scrollTop() / 5);
@@ -147,6 +152,7 @@
             $(".details").append(
               '<img class="mx-5" src="./Creatures/striped-bass.png" style="max-height: 110px">'
             );
+          } else if (depth < 10) {
           } else if (depth >= 21 && depth < 42) {
             $(".fish").append(
               '<img class="mx-5" src="./Creatures/staghorn-coral.png" style="max-height: 180px">' +
@@ -383,7 +389,7 @@
             );
             $(".fish").append(
               '<img class="mx-5" src="./Creatures/pacific-cod.png" style="max-height: 400px">' +
-                '<img class="mx-5" src="./Creatures/marrus-orthocanna" style="max-height: 400px">' +
+                '<img class="mx-5" src="./Creatures/marrus-orthocanna.png" style="max-height: 400px">' +
                 '<p class="text-center text-light"></p>'
             );
             $(".fish1").append(
@@ -529,8 +535,8 @@
             );
           } else {
             $(".details").append(
-              "<p class='text-center h1 text-light'>Deep Sea beyond imaginable</p>"+
-              "<p class='text-center h3 text-light'>Deep part is almost lonely...</p>`"
+              "<p class='text-center h1 text-light'>Deep Sea beyond imaginable</p>" +
+                "<p class='text-center h3 text-light'>Deep part is almost lonely...</p>`"
             );
           }
           $("#depth").text("Depth: " + depth + " meters");

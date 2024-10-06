@@ -25,6 +25,7 @@ body {
   top: 50%;
   left: 50%;
   width: 250vw;
+  z-index: 10000;
   height: 250vw;
   margin-left: -125vw;
   transform-origin: 50% 50%;
@@ -146,7 +147,14 @@ body {
   height: 120px;
   background: radial-gradient(circle, #b8b8b7, #f4f4f4);
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 100px rgba(255, 255, 255,1);
+  transform: translate(-50%, -50%);
+}
+
+.say {
+  position: absolute;
+  top: 80px;
+  right: 70px;
   transform: translate(-50%, -50%);
 }
 .star {
