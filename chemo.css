@@ -1,0 +1,253 @@
+svg#fish {
+  bottom: 30vh;
+}
+/* Fish Animation */
+svg.fish {
+  overflow: visible;
+}
+
+@-webkit-keyframes swim {
+  0% {
+    margin-left: -235px;
+  }
+  90% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes swim {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+.fish {
+  z-index: -1;
+  width: 235px;
+  height: 104px;
+  margin-left: -235px;
+  position: absolute;
+  animation: swim 20s;
+  -webkit-animation: swim 20s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+}
+
+svg #fish1,
+svg #fish2,
+svg #fish3,
+svg #fish4,
+svg #fish5,
+svg #fish6 {
+  fill: #dbddde;
+  filter: blur(5px);
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+svg #fish2 {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+svg #fish3 {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+svg #fish4 {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+svg #fish5 {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+svg #fish6 {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+/**/
+@-moz-keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+/*END Fish Animation*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: linear-gradient(180deg, #a6e5eb, #005261);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.f1 {
+  z-index: -10;
+  position: absolute;
+  bottom: -10vh;
+  left: -10vw;
+  height: 30vh;
+  z-index: -20;
+  width: 50vw;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #abc797, #515f41);
+}
+.f2 {
+  z-index: -5;
+  position: absolute;
+  bottom: -35vh;
+  right: -10vw;
+  height: 60vh;
+  z-index: -10;
+  width: 80vw;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #a9b16e, #424426);
+}
+
+/* coral */
+#coral {
+  width: 50px;
+  height: 220px;
+  background: linear-gradient(90deg, #90ab75 10%, #014b06 90%);
+  border-radius: 40%;
+  position: absolute;
+  bottom: -50px;
+  right: 20vh;
+  z-index: 100;
+  box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.5);
+  animation: bounce 4s infinite;
+}
+#coral2 {
+  width: 40px;
+  height: 120px;
+  background: linear-gradient(90deg, #61734f 10%, #013f05 90%);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 40vh;
+  z-index: -30;
+  box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.5);
+  animation: bounce 3s infinite;
+}
+
+.c1,.c2,.c3 {
+  width: 40px;
+  height: 120px;
+  background: linear-gradient(90deg, #61734f 10%, #013f05 90%);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.5);
+  animation: bounce 7s infinite;
+}
+.c1{
+    bottom: 1vh;
+    left: 10vh;
+    z-index: -30;
+}
+.c2{
+    bottom: -8vh;
+    left: 14vw;
+}
+.c3{
+    bottom: -4vh;
+    z-index: -15;
+    left: 32vw;
+}
+.bubble {
+  z-index: 110;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(
+    -120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 50%;
+  position: absolute;
+
+  animation: rise 6s forwards;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes rise {
+  to {
+    transform: translateY(-80vh);
+    opacity: 50%;
+  }
+}
